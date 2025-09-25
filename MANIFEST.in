@@ -1,0 +1,2 @@
+include dtsfuncts/ConfigFiles/*.*
+include LICENSE
