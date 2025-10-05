@@ -45,7 +45,7 @@ def _launch_manu_correct(master, year_select, progress_callback):
         progress_callback(100)
 
         info_title = "- Information -"
-        info_text = ("Les données corrigées automatiquement par DOIs ont été complétées 
+        info_text = ("Les données corrigées automatiquement par DOIs ont été complétées "
                      f"avec les données corrigées manuellement pour l'année {year_select}."
                      "\n\nLes données corrigées complètes ont été sauvegardées au format csv sous :"
                      f"\n\n'{corr_csv_path}'."
