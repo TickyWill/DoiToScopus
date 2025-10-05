@@ -1,3 +1,5 @@
+git+https://github.com/TickyWill/BiblioParsing.git@main
+git+https://github.com/TickyWill/BiblioMeter.git@v6.2.0
 ScopusApyJson==1.1.5
 auto_py_to_exe==2.42.0
 numpy==1.26.3
