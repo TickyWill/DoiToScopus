@@ -36,7 +36,7 @@ class AppMain(tk.Tk):
         # Setting useful paths
         app_functs_path = Path(__file__).parent.parent / Path('dtsfuncts')
         config_path = app_functs_path / Path(dts_pg.CONFIG_FOLDER)
-        icon_path = config_path / Path('BM-logo.ico')
+        icon_path = config_path / Path(dts_gg.APP_LOGO)
 
         # Setting class attributes and methods (mandatory)
         _ = get_monitors()
@@ -54,9 +54,9 @@ class AppMain(tk.Tk):
         AppMain.pages_labels = dts_gg.PAGES_LABELS
 
         # Getting useful screen sizes and scale factors depending on displays properties
-        (AppMain.win_width_px, AppMain.win_height_px,
-         AppMain.width_sf_px, AppMain.height_sf_px,
-         AppMain.width_sf_mm, AppMain.height_sf_mm) = bm_gu.general_properties(self)
+        (AppMain.win_width_px, AppMain.win_height_px, AppMain.width_sf_px, AppMain.height_sf_px,
+         AppMain.width_sf_mm, AppMain.height_sf_mm) = bm_gu.general_properties(self,
+                                                                               dts_gg.APP_WIN_TITLE)
         AppMain.width_sf_min = min(AppMain.width_sf_mm, AppMain.width_sf_px)
         AppMain.mid_x_pos = int(AppMain.win_width_px * 0.5)
         AppMain.sf_mm_tup = (AppMain.width_sf_mm, AppMain.height_sf_mm)

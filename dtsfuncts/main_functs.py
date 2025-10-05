@@ -125,12 +125,12 @@ def _get_init_scopus_data(scopus_file_path):
     return scopus_df, scopus_cols_list
 
 
-def correct_scopus(init_scopus_file_path, progress_callback=None,  verbose=False):
+def correct_scopus(init_scopus_csv_path, progress_callback=None,  verbose=False):
     """Complements the scopus extraction with information on publications 
     of which DOIs are found in HAL extraction.
     
     Args:
-        init_scopus_file_path (path): Full path to the initial Scopus extraction file.
+        init_scopus_csv_path (path): Full path to the initial Scopus extraction file.
     Returns:
         (tup): (Data of DOIs for which the extraction has been successful (dataframe) \
         Data of DOIs for which the extraction has been failed (dataframe), \
@@ -140,7 +140,7 @@ def correct_scopus(init_scopus_file_path, progress_callback=None,  verbose=False
     authy_status = False
 
     # Setting already extracted DOIs list from scopus database
-    init_scopus_df, scopus_cols_list = _get_init_scopus_data(init_scopus_file_path)        
+    init_scopus_df, scopus_cols_list = _get_init_scopus_data(init_scopus_csv_path)        
     step_nb = len(init_scopus_df)
 
     new_scopus_df = pd.DataFrame(columns=scopus_cols_list)
